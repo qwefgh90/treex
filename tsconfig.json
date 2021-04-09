@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "target": "es5",
+      "lib": ["DOM", "ES2015"],
+      "declaration": true,
+      "declarationMap": true,
+      "inlineSourceMap": true,
+      "outDir": "./dist",
+      "rootDir": "src",
+      "moduleResolution": "Node",
+      "strict": true
+    },
+    "references": []
+  }

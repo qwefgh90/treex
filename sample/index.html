@@ -1,0 +1,130 @@
+<head>
+    <title>Treex</title>
+    <script src="../treex.js"></script>
+    <link rel="stylesheet" href="../style/core.css">
+    </link>
+</head>
+
+<body>
+    <div style="width: 1080px; margin: auto;">
+        <h1>Treex</h1>
+        <h3>
+            It provides well-defined tree API and the presentation layer for the reactive applitcation.
+        </h3>
+        <div  style="padding: 0em 2em; padding-bottom: 0em;">
+            <label for="filter">* Initial options: </label>
+            <button class="btn">hiddenRoot</button>
+        </div>
+        <div  style="padding: 0em 2em; padding-bottom: 0em;">
+            <label for="filter">* Filter: </label>
+            <input class="filter" type="text" placeholder="filter"/>
+        </div>
+        <div id="playground" style="padding: 2em; padding-top: 0.2em;"></div>
+    </div>
+    
+    <script>
+        const node20 = {
+            data: "spring-cloud-gateway",
+            children: []
+        }
+        const node19 = {
+            data: "spring-boot-jwt",
+            children: []
+        }
+        const node18 = {
+            data: "rxJava",
+            children: []
+        }
+        const node17 = {
+            data: "okhttp",
+            children: []
+        }
+        const node16 = {
+            data: "guava",
+            children: []
+        }
+        const node15 = {
+            data: "elasticsearch",
+            children: []
+        }
+        const node14 = {
+            data: "spring-boot",
+            children: [node19, node20]
+        }
+        const node13 = {
+            data: "Java",
+            children: [node14, node15, node16, node17, node18]
+        }
+        const node12 = {
+            data: "ngrx",
+            children: undefined
+        }
+        const node11 = {
+            data: "components",
+            children: undefined
+        }
+        const node10 = {
+            data: "angular-cli",
+            children: undefined
+        }
+        const node9 = {
+            data: "material-ui",
+            children: undefined
+        }
+        const node8 = {
+            data: "angular",
+            children: [node10, node11, node12]
+        }
+        const node7 = {
+            data: "vscode",
+            children: []
+        }
+        const node6 = {
+            data: "Javascript",
+            children: [node7, node8, node9]
+        }
+        const node5 = {
+            data: "awesome-rust",
+            children: []
+        }
+        const node4 = {
+            data: "alacritty",
+            children: []
+        }
+        const node3 = {
+            data: "deno",
+            children: []
+        }
+        const node2 = {
+            data: "Rust",
+            children: [node3, node4, node5]
+        }
+        const node1 = {
+            data: "Language",
+            children: [node2, node6, node13]
+        }
+        let tree = treex.Tree.createTree(node1);
+        let element = treex.TreeX.createTree(tree, { document });
+        let playground = document.querySelector('#playground');
+        playground.appendChild(element);
+        let filterEl = document.querySelector('input.filter');
+        filterEl.oninput = () => {
+            tree.getNodes().forEach((n) => {
+                if(n.data.toLowerCase().includes(filterEl.value.toLowerCase())){
+                    n.setVisibility(true);
+                }else{
+                    n.setVisibility(false);
+                }
+            });
+        };
+        let button = document.querySelector("button");
+        let hiddenRoot = false;
+        button.onclick = () => {
+            hiddenRoot = !hiddenRoot;
+            element = treex.TreeX.createTree(tree, { document, hiddenRoot });
+            playground.children[0].remove();
+            playground.appendChild(element);
+            filterEl.value = "";
+        };
+    </script>
+</body>
