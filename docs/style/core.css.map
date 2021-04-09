@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../../src/presentation/style/core.scss","../../node_modules/bootstrap/scss/_variables.scss"],"names":[],"mappings":"AAMI;EACI;EACA;EACA;;AAEJ;EACI;;AAEJ;EACI;;AAEJ;EACI;;AAEJ;EACI;;AAEJ;EACI;EACA;EACA;EACA;EACA;;AAEJ;EACI;EACA;EACA;EACA;EACA;;AAEJ;EACI,kBC5BG;;AD8BP;EACI,kBC/BG","file":"core.css"}

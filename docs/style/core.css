@@ -1,0 +1,39 @@
+.treex-default-box {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  padding-left: 0.5em;
+}
+.treex-default-children {
+  margin-left: 1em;
+}
+.treex-default-value {
+  font-weight: bold;
+}
+.treex-default-is-hidden {
+  visibility: hidden !important;
+}
+.treex-default-is-none {
+  display: none !important;
+}
+.treex-default-expand {
+  width: 1em;
+  padding: 0.25em;
+  border-radius: 0.5em;
+  display: inline-block;
+  cursor: pointer;
+}
+.treex-default-collapse {
+  width: 1em;
+  padding: 0.25em;
+  border-radius: 0.5em;
+  display: inline-block;
+  cursor: pointer;
+}
+.treex-default-expand:hover {
+  background-color: #e9ecef;
+}
+.treex-default-collapse:hover {
+  background-color: #e9ecef;
+}
+
+/*# sourceMappingURL=core.css.map */

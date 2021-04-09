@@ -36,7 +36,7 @@ module.exports = {
   plugins: [
     new CopyPlugin({
       patterns: [
-        { from: "sample", to: "sample" },
+        { from: "dist", to: "../docs" },
       ],
     }),
   ],
