@@ -20,10 +20,7 @@ module.exports = {
         include: path.resolve(__dirname, "src"),
         use: [
           {
-            loader: 'ts-loader',
-            options: {
-              transpileOnly: true
-            }
+            loader: 'ts-loader'
           }
         ]
       }
