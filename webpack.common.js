@@ -7,7 +7,7 @@ module.exports = {
   mode: "development",
   entry: "./src/index.ts",
   output: {
-    filename: "treex.js", // Desired file name. Same as in package.json's "main" field.
+    filename: "index.js", // Desired file name. Same as in package.json's "main" field.
     path: path.resolve(__dirname, "dist"),
     library: "treex", // Desired name for the global variable when using as a drop-in script-tag.
     libraryTarget: "umd",
