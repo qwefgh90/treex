@@ -4,6 +4,8 @@
 
 ## TreeNode.contains() method
 
+It lets us know whether a node exists in a tree.
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,9 +16,11 @@ contains(node: TreeNode<T>): boolean;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  node | [TreeNode](./treex.treenode.md)<!-- -->&lt;T&gt; |  |
+|  node | [TreeNode](./treex.treenode.md)<!-- -->&lt;T&gt; | a node to check |
 
 <b>Returns:</b>
 
 boolean
+
+return true if a node exists in the tree, otherwise return false.
 

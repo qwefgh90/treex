@@ -13,3 +13,5 @@ onRemoved(): Observable<TreeNode<T>>;
 
 Observable&lt;[TreeNode](./treex.treenode.md)<!-- -->&lt;T&gt;&gt;
 
+an observable which observe a removed node
+

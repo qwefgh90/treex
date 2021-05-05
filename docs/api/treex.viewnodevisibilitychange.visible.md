@@ -4,6 +4,8 @@
 
 ## ViewNodeVisibilityChange.visible property
 
+current status of visibility
+
 <b>Signature:</b>
 
 ```typescript

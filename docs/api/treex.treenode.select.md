@@ -4,6 +4,8 @@
 
 ## TreeNode.select() method
 
+Select this node.
+
 <b>Signature:</b>
 
 ```typescript

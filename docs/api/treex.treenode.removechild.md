@@ -4,6 +4,8 @@
 
 ## TreeNode.removeChild() method
 
+Remove a child node.
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,9 +16,11 @@ removeChild(node: TreeNode<T>): boolean;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  node | [TreeNode](./treex.treenode.md)<!-- -->&lt;T&gt; |  |
+|  node | [TreeNode](./treex.treenode.md)<!-- -->&lt;T&gt; | a node to remove |
 
 <b>Returns:</b>
 
 boolean
+
+if it's found in a child list return true, otherwise false
 

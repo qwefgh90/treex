@@ -4,7 +4,7 @@
 
 ## ManipulationNode interface
 
-It's an interface to provide APIs which manipulate a node for developers. There are some event emitters. one of them emits events when detecting changes in child nodes It can be a contract for developers to build treex.
+It's an interface to provide APIs which manipulate a node for developers. There are some event emitters. one of them emits events when detecting changes in child nodes. It can be a contract for developers to build treex.
 
 <b>Signature:</b>
 

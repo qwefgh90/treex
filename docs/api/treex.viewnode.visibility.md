@@ -4,6 +4,8 @@
 
 ## ViewNode.visibility property
 
+Whether it is visible.
+
 <b>Signature:</b>
 
 ```typescript

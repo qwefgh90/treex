@@ -13,3 +13,5 @@ onChildChanged(): Observable<ChildChangeEvent<T>>;
 
 Observable&lt;[ChildChangeEvent](./treex.childchangeevent.md)<!-- -->&lt;T&gt;&gt;
 
+a observable which emits [ChildChangeEvent](./treex.childchangeevent.md)
+

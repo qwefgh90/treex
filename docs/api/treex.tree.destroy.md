@@ -4,6 +4,8 @@
 
 ## Tree.destroy() method
 
+Destory the resource of this tree.
+
 <b>Signature:</b>
 
 ```typescript
@@ -12,4 +14,8 @@ destroy(): void;
 <b>Returns:</b>
 
 void
+
+## Remarks
+
+All subjects will be deallocated completely.
 

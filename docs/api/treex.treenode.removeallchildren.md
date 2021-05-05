@@ -4,6 +4,8 @@
 
 ## TreeNode.removeAllChildren() method
 
+Clean up a child list.
+
 <b>Signature:</b>
 
 ```typescript
@@ -12,4 +14,6 @@ removeAllChildren(): number;
 <b>Returns:</b>
 
 number
+
+the number of nodes which have been removed
 

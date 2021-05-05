@@ -15,7 +15,7 @@ static createTree<T extends ToStringInterface>(tree: Tree<T>, option?: TreeOptio
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  tree | [Tree](./treex.tree.md)<!-- -->&lt;T&gt; |  |
-|  option | TreeOption&lt;T&gt; |  |
+|  option | [TreeOption](./treex.treeoption.md)<!-- -->&lt;T&gt; |  |
 
 <b>Returns:</b>
 

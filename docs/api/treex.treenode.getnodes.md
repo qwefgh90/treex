@@ -4,6 +4,7 @@
 
 ## TreeNode.getNodes() method
 
+
 <b>Signature:</b>
 
 ```typescript

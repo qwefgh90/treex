@@ -4,6 +4,8 @@
 
 ## Tree.createTree() method
 
+This static method is the only way to build a new tree.
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,9 +16,11 @@ static createTree<T>(nodeProp: NodeProp<T>): Tree<T>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  nodeProp | [NodeProp](./treex.nodeprop.md)<!-- -->&lt;T&gt; |  |
+|  nodeProp | [NodeProp](./treex.nodeprop.md)<!-- -->&lt;T&gt; | A root node of this tree |
 
 <b>Returns:</b>
 
 [Tree](./treex.tree.md)<!-- -->&lt;T&gt;
+
+A new tree
 

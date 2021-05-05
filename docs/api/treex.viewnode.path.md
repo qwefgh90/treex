@@ -4,6 +4,8 @@
 
 ## ViewNode.path property
 
+A string representation of this node's location.
+
 <b>Signature:</b>
 
 ```typescript

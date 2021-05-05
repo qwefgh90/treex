@@ -2,7 +2,10 @@ import { Subscription } from "rxjs";
 import { TreeNode } from "../core/model/tree/node";
 import { Tree } from "../core/model/tree/tree";
 import { NodeProp } from "../core/model/view/node-prop";
-interface TreeOption<T> {
+/**
+ * @public
+ */
+export interface TreeOption<T> {
     document: Document,
     templateFactory?: TemplateFactory<T>,
     hiddenRoot?: boolean,
@@ -11,6 +14,10 @@ const defualtOption = {
     document, hiddenRoot: false
 }
 const prefix = `treex-default-`;
+
+/**
+ * @public
+ */
 export const classNameMap = Object.freeze({
     outerClass: `${prefix}outer`,
     nodeBoxClass: `${prefix}box`,
@@ -22,7 +29,13 @@ export const classNameMap = Object.freeze({
     hiddenClass: `${prefix}is-hidden`,
     noneClass: `${prefix}is-none`,
 });
-type ToStringInterface = Pick<string, "toString">;
+/**
+ * @public
+ */
+export type ToStringInterface = Pick<string, "toString">;
+/**
+ * @public
+ */
 export class TreeX {
     public static createTree<T extends ToStringInterface>(tree: Tree<T>, option: TreeOption<T> = defualtOption): HTMLElement {
         if (tree.root.data?.toString == undefined) {
@@ -123,6 +136,9 @@ export class TreeX {
 }
 
 
+/**
+ * @public
+ */
 export class TemplateFactory<T>{
     static getDefaultFactory<U extends ToStringInterface>(document: Document): TemplateFactory<U> {
         const defaultFragment = document.createDocumentFragment();
@@ -154,11 +170,6 @@ export class TemplateFactory<T>{
         if(!this.userFragment || !this.userConnector)
             throw new Error("a fragment or a connector must not undefined.");
     }
-    /**
-     * to support collapse and expand
-     * @param connector 
-     * @returns 
-     */
     private extendedConnector(connector: (fragment: DocumentFragment, node: TreeNode<T>) => void){
         return (fragment: DocumentFragment, node: TreeNode<T>) => {
             let _collapseElement = fragment.querySelector(`.${classNameMap.collapseIconClass}`);
@@ -213,11 +224,6 @@ export class TemplateFactory<T>{
             connector(fragment, node);
         };
     }
-    /**
-     * to support collapse and expand
-     * @param fragment 
-     * @returns 
-     */
     private extendedFragment(fragment: DocumentFragment){
         let icons = document.createElement('div');
         let collapseElement = fragment.querySelector(`.${classNameMap.collapseIconClass}`);

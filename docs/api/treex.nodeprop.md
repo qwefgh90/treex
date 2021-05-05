@@ -16,6 +16,6 @@ export interface NodeProp<T>
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [children?](./treex.nodeprop.children.md) | [NodeProp](./treex.nodeprop.md)<!-- -->&lt;T&gt;\[\] | <i>(Optional)</i> |
-|  [data](./treex.nodeprop.data.md) | T |  |
+|  [children?](./treex.nodeprop.children.md) | [NodeProp](./treex.nodeprop.md)<!-- -->&lt;T&gt;\[\] | <i>(Optional)</i> A child list |
+|  [data](./treex.nodeprop.data.md) | T | Data to have |
 

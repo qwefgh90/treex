@@ -4,7 +4,7 @@
 
 ## TreeNode.bfs() method
 
-starts from zero level
+Initially, it was deisgned to traverse a tree. And two parameters were added newly to satisfy requirements without a performance loss. It was required to remove some nodes from a result and stop it when the predicate returns true during traversing the tree.
 
 <b>Signature:</b>
 
@@ -22,11 +22,12 @@ bfs(predicate?: (entry: {
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  predicate | (entry: { item: [TreeNode](./treex.treenode.md)<!-- -->&lt;T&gt;; level: number; }) =&gt; boolean |  |
-|  stopWhenFound | boolean |  |
+|  predicate | (entry: { item: [TreeNode](./treex.treenode.md)<!-- -->&lt;T&gt;; level: number; }) =&gt; boolean | a filter to remove some nodes from a return |
+|  stopWhenFound | boolean | whether it stops when the predicate returns true |
 
 <b>Returns:</b>
 
 { item: [TreeNode](./treex.treenode.md)<!-- -->&lt;T&gt;; level: number; }\[\]
 
+it returns a list containing data which consists of a node and a level which the node is on.
 

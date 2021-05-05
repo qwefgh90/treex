@@ -4,6 +4,8 @@
 
 ## Tree.onSelectionChange() method
 
+selection events captured by all nodes
+
 <b>Signature:</b>
 
 ```typescript

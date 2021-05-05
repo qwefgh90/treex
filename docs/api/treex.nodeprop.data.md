@@ -4,6 +4,8 @@
 
 ## NodeProp.data property
 
+Data to have
+
 <b>Signature:</b>
 
 ```typescript

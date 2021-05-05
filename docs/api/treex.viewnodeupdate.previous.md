@@ -4,6 +4,8 @@
 
 ## ViewNodeUpdate.previous property
 
+Data before a change happened
+
 <b>Signature:</b>
 
 ```typescript

@@ -4,6 +4,8 @@
 
 ## ViewNodeVisibilityChange interface
 
+An event interface for visibility
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,6 +16,6 @@ export interface ViewNodeVisibilityChange<T>
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [node](./treex.viewnodevisibilitychange.node.md) | [ViewNode](./treex.viewnode.md)<!-- -->&lt;T&gt; |  |
-|  [visible](./treex.viewnodevisibilitychange.visible.md) | boolean |  |
+|  [node](./treex.viewnodevisibilitychange.node.md) | [ViewNode](./treex.viewnode.md)<!-- -->&lt;T&gt; | A node where a change happens |
+|  [visible](./treex.viewnodevisibilitychange.visible.md) | boolean | current status of visibility |
 

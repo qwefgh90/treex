@@ -4,6 +4,8 @@
 
 ## TreeNode.appendBefore() method
 
+It usually append a node successfully, but it isn't possible to append a node in front of root node.
+
 <b>Signature:</b>
 
 ```typescript
@@ -19,4 +21,6 @@ appendBefore(prop: NodeProp<T>): boolean;
 <b>Returns:</b>
 
 boolean
+
+if a node is appended successfully, return true, otherwise return false
 

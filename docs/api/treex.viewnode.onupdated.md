@@ -4,6 +4,8 @@
 
 ## ViewNode.onUpdated() method
 
+It's a event listener on changes of data.
+
 <b>Signature:</b>
 
 ```typescript
@@ -12,4 +14,6 @@ onUpdated(): Observable<ViewNodeUpdate<T>>;
 <b>Returns:</b>
 
 Observable&lt;[ViewNodeUpdate](./treex.viewnodeupdate.md)<!-- -->&lt;T&gt;&gt;
+
+an observable to observe [ViewNodeUpdate](./treex.viewnodeupdate.md)
 

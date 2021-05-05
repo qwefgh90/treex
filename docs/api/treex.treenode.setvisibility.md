@@ -4,6 +4,8 @@
 
 ## TreeNode.setVisibility() method
 
+Set the visibility of this node.
+
 <b>Signature:</b>
 
 ```typescript

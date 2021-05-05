@@ -4,9 +4,9 @@ import { ViewNode } from "../view/view-node";
 import { TreeNode } from "./node";
 /**
  * It's an interface to provide APIs which manipulate a node for developers.
- * There are some event emitters. one of them emits events when detecting changes in child nodes
+ * There are some event emitters. one of them emits events when detecting changes in child nodes.
  * It can be a contract for developers to build treex.
- *
+ * @public
  * @typeParam T - a type of data which this node contains
  */
 export interface ManipulationNode<T> extends ViewNode<T> {
@@ -59,11 +59,13 @@ export interface ManipulationNode<T> extends ViewNode<T> {
 }
 /**
  * There are some events every node must emit when something changes on children.
+ * @public
  * @typeParam T - a type of data which this event's node contains
  */
 export declare type ChildChangeEvent<T> = ChildAddedEvent<T> | ChildRemovedEvent<T> | ChildInitializedEvent<T>;
 /**
  * When one child is added to a child list, it's emitted.
+ * @public
  * @typeParam T - a type of data which this event's node contains
  */
 export interface ChildAddedEvent<T> {
@@ -84,13 +86,14 @@ export interface ChildAddedEvent<T> {
      */
     addedNode: TreeNode<T>;
     /**
-     * @deprecated Use {@link TreeNode.children | the children property}
+     * @deprecated Use {@link TreeNode.children | the children property} instead of it.
      * A new child list after adding a node.
      */
     children: ReadonlyArray<TreeNode<T>>;
 }
 /**
  * When one child is removed to a child list, it's emitted.
+ * @public
  * @typeParam T - a type of data which this event's node contains
  */
 export interface ChildRemovedEvent<T> {
@@ -107,7 +110,7 @@ export interface ChildRemovedEvent<T> {
      */
     removedNode: TreeNode<T>;
     /**
-     * @deprecated Use {@link TreeNode.children | the children property}
+     * @deprecated Use {@link TreeNode.children | the children property} instead of it.
      * A new child list after removing a node.
      */
     children: ReadonlyArray<TreeNode<T>>;
@@ -122,6 +125,7 @@ export interface ChildRemovedEvent<T> {
 }
 /**
  * When a child list is initialized first, it's emitted.
+ * @public
  * @typeParam T - a type of data which this event's node contains
  */
 export interface ChildInitializedEvent<T> {
@@ -134,7 +138,7 @@ export interface ChildInitializedEvent<T> {
      */
     node: TreeNode<T>;
     /**
-     * @deprecated Use {@link TreeNode.children | the children property}
+     * @deprecated Use {@link TreeNode.children | the children property} instead of it.
      * A new child list which has just been initialized
      */
     children: ReadonlyArray<TreeNode<T>>;

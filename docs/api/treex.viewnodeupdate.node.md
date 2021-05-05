@@ -4,6 +4,8 @@
 
 ## ViewNodeUpdate.node property
 
+A node where a change happened
+
 <b>Signature:</b>
 
 ```typescript

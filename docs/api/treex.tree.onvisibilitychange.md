@@ -4,6 +4,8 @@
 
 ## Tree.onVisibilityChange() method
 
+visibility events captured by all nodes
+
 <b>Signature:</b>
 
 ```typescript

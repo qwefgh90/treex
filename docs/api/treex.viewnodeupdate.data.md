@@ -4,6 +4,8 @@
 
 ## ViewNodeUpdate.data property
 
+Data after a change happened
+
 <b>Signature:</b>
 
 ```typescript

@@ -4,6 +4,7 @@
 
 ## TreeX class
 
+
 <b>Signature:</b>
 
 ```typescript

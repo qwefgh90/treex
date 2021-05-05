@@ -4,6 +4,8 @@
 
 ## ViewNodeUpdate interface
 
+An event interface for updated data
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,7 +16,7 @@ export interface ViewNodeUpdate<T>
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [data](./treex.viewnodeupdate.data.md) | T |  |
-|  [node](./treex.viewnodeupdate.node.md) | [ViewNode](./treex.viewnode.md)<!-- -->&lt;T&gt; |  |
-|  [previous](./treex.viewnodeupdate.previous.md) | T |  |
+|  [data](./treex.viewnodeupdate.data.md) | T | Data after a change happened |
+|  [node](./treex.viewnodeupdate.node.md) | [ViewNode](./treex.viewnode.md)<!-- -->&lt;T&gt; | A node where a change happened |
+|  [previous](./treex.viewnodeupdate.previous.md) | T | Data before a change happened |
 

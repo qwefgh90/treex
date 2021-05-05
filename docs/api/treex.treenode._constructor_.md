@@ -16,7 +16,7 @@ constructor(_prop: NodeProp<T>, _parent: TreeNode<T> | "tree" | undefined, resou
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  \_prop | [NodeProp](./treex.nodeprop.md)<!-- -->&lt;T&gt; |  |
-|  \_parent | [TreeNode](./treex.treenode.md)<!-- -->&lt;T&gt; \| "tree" \| undefined |  |
-|  resource | [TreeResource](./treex.treeresource.md)<!-- -->&lt;T&gt; |  |
+|  \_prop | [NodeProp](./treex.nodeprop.md)<!-- -->&lt;T&gt; | properties which are used to instantiate new instance |
+|  \_parent | [TreeNode](./treex.treenode.md)<!-- -->&lt;T&gt; \| "tree" \| undefined | a parent node |
+|  resource | [TreeResource](./treex.treeresource.md)<!-- -->&lt;T&gt; | shared resources with other nodes |
 

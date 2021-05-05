@@ -4,6 +4,8 @@
 
 ## ViewNodeSelectionChange.selected property
 
+current status of selection
+
 <b>Signature:</b>
 
 ```typescript

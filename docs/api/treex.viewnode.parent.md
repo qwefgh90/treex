@@ -4,6 +4,8 @@
 
 ## ViewNode.parent property
 
+If this node is a root, the parent property must be "tree". If this node a node which is not a root and in a tree, it must be a existing node. Otherwise, it must be undefined and this node isn't belonging to a tree.
+
 <b>Signature:</b>
 
 ```typescript

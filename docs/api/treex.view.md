@@ -4,6 +4,8 @@
 
 ## View interface
 
+A simple interface for providing a few APIs which a tree must have.
+
 <b>Signature:</b>
 
 ```typescript
@@ -15,13 +17,13 @@ export interface View<T> extends RootNode<T>
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [root](./treex.view.root.md) | [ViewNode](./treex.viewnode.md)<!-- -->&lt;T&gt; |  |
+|  [root](./treex.view.root.md) | [ViewNode](./treex.viewnode.md)<!-- -->&lt;T&gt; | A root node in this tree |
 
 ## Methods
 
 |  Method | Description |
 |  --- | --- |
-|  [onSelectionChange()](./treex.view.onselectionchange.md) |  |
-|  [onUpdated()](./treex.view.onupdated.md) |  |
-|  [onVisibilityChange()](./treex.view.onvisibilitychange.md) |  |
+|  [onSelectionChange()](./treex.view.onselectionchange.md) | selection events captured by all nodes |
+|  [onUpdated()](./treex.view.onupdated.md) | update events captured by all nodes |
+|  [onVisibilityChange()](./treex.view.onvisibilitychange.md) | visibility events captured by all nodes |
 

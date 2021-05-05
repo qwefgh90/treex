@@ -4,6 +4,8 @@
 
 ## View.root property
 
+A root node in this tree
+
 <b>Signature:</b>
 
 ```typescript

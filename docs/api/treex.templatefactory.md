@@ -4,6 +4,7 @@
 
 ## TemplateFactory class
 
+
 <b>Signature:</b>
 
 ```typescript
@@ -15,7 +16,7 @@ export declare class TemplateFactory<T>
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
 |  [connector](./treex.templatefactory.connector.md) |  | (fragment: DocumentFragment, node: [TreeNode](./treex.treenode.md)<!-- -->&lt;T&gt;) =&gt; void |  |
-|  [defaultConnector](./treex.templatefactory.defaultconnector.md) | <code>static</code> | &lt;U extends ToStringInterface&gt;(fragment: DocumentFragment, node: [TreeNode](./treex.treenode.md)<!-- -->&lt;U&gt;) =&gt; void |  |
+|  [defaultConnector](./treex.templatefactory.defaultconnector.md) | <code>static</code> | &lt;U extends [ToStringInterface](./treex.tostringinterface.md)<!-- -->&gt;(fragment: DocumentFragment, node: [TreeNode](./treex.treenode.md)<!-- -->&lt;U&gt;) =&gt; void |  |
 |  [fragment](./treex.templatefactory.fragment.md) |  | DocumentFragment |  |
 
 ## Methods

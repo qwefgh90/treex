@@ -4,6 +4,8 @@
 
 ## Tree.find() method
 
+It tries to visit every node and apply a predicate to each node. When a result value of executing the predicate with a node is true, It stops visiting and return that node.
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,9 +16,11 @@ find(predicate: (node: TreeNode<T>) => boolean): TreeNode<T> | undefined;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  predicate | (node: [TreeNode](./treex.treenode.md)<!-- -->&lt;T&gt;) =&gt; boolean |  |
+|  predicate | (node: [TreeNode](./treex.treenode.md)<!-- -->&lt;T&gt;) =&gt; boolean | a predicate which is used to find a node |
 
 <b>Returns:</b>
 
 [TreeNode](./treex.treenode.md)<!-- -->&lt;T&gt; \| undefined
+
+return a node if a predicate return true, otherwise reutrn undefined.
 

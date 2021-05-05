@@ -4,6 +4,8 @@
 
 ## TreeNode.height property
 
+A height of a tree.
+
 <b>Signature:</b>
 
 ```typescript

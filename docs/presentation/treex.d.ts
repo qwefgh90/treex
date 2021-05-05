@@ -1,10 +1,16 @@
 import { TreeNode } from "../core/model/tree/node";
 import { Tree } from "../core/model/tree/tree";
-interface TreeOption<T> {
+/**
+ * @public
+ */
+export interface TreeOption<T> {
     document: Document;
     templateFactory?: TemplateFactory<T>;
     hiddenRoot?: boolean;
 }
+/**
+ * @public
+ */
 export declare const classNameMap: Readonly<{
     outerClass: string;
     nodeBoxClass: string;
@@ -16,7 +22,10 @@ export declare const classNameMap: Readonly<{
     hiddenClass: string;
     noneClass: string;
 }>;
-declare type ToStringInterface = Pick<string, "toString">;
+export declare type ToStringInterface = Pick<string, "toString">;
+/**
+ * @public
+ */
 export declare class TreeX {
     static createTree<T extends ToStringInterface>(tree: Tree<T>, option?: TreeOption<T>): HTMLElement;
     static templateFactory<T>(fragment: DocumentFragment, connector: (fragment: DocumentFragment, node: TreeNode<T>) => void): TemplateFactory<T>;
@@ -24,6 +33,9 @@ export declare class TreeX {
     private static createElementSet;
     private static createTreeNode;
 }
+/**
+ * @public
+ */
 export declare class TemplateFactory<T> {
     private readonly userFragment;
     private readonly userConnector;
@@ -34,18 +46,7 @@ export declare class TemplateFactory<T> {
     private constructor();
     static create<U extends ToStringInterface>(fragment: DocumentFragment, connector: (htmlElement: DocumentFragment, node: TreeNode<U>) => void): TemplateFactory<U>;
     private checkValidation;
-    /**
-     * to support collapse and expand
-     * @param connector
-     * @returns
-     */
     private extendedConnector;
-    /**
-     * to support collapse and expand
-     * @param fragment
-     * @returns
-     */
     private extendedFragment;
 }
-export {};
 //# sourceMappingURL=treex.d.ts.map

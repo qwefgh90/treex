@@ -4,6 +4,8 @@
 
 ## ViewNodeSelectionChange.node property
 
+A node where a selection changed
+
 <b>Signature:</b>
 
 ```typescript

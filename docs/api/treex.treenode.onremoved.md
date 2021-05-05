@@ -4,6 +4,8 @@
 
 ## TreeNode.onRemoved() method
 
+When a node is removed in a tree it belongs to, it resolve a promise.
+
 <b>Signature:</b>
 
 ```typescript
@@ -12,4 +14,6 @@ onRemoved(): Promise<TreeNode<T>>;
 <b>Returns:</b>
 
 Promise&lt;[TreeNode](./treex.treenode.md)<!-- -->&lt;T&gt;&gt;
+
+a promise which is resolved when this node is removed.
 

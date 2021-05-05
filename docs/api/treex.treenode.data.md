@@ -4,6 +4,8 @@
 
 ## TreeNode.data property
 
+A data this node contains.
+
 <b>Signature:</b>
 
 ```typescript

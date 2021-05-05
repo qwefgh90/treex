@@ -4,6 +4,8 @@
 
 ## TreeNode.deselect() method
 
+Deselect this node.
+
 <b>Signature:</b>
 
 ```typescript

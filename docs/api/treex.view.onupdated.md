@@ -4,6 +4,8 @@
 
 ## View.onUpdated() method
 
+update events captured by all nodes
+
 <b>Signature:</b>
 
 ```typescript

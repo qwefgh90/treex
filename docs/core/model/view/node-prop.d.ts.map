@@ -1,1 +1,1 @@
-{"version":3,"file":"node-prop.d.ts","sourceRoot":"","sources":["../../../../src/core/model/view/node-prop.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,MAAM,WAAW,QAAQ,CAAC,CAAC;IACvB,IAAI,EAAE,CAAC,CAAC;IACR,QAAQ,CAAC,EAAE,QAAQ,CAAC,CAAC,CAAC,EAAE,CAAA;CAC3B"}
+{"version":3,"file":"node-prop.d.ts","sourceRoot":"","sources":["../../../../src/core/model/view/node-prop.ts"],"names":[],"mappings":"AAAA;;;GAGG;AACH,MAAM,WAAW,QAAQ,CAAC,CAAC;IACvB;;OAEG;IACH,IAAI,EAAE,CAAC,CAAC;IACR;;OAEG;IACH,QAAQ,CAAC,EAAE,QAAQ,CAAC,CAAC,CAAC,EAAE,CAAA;CAC3B"}

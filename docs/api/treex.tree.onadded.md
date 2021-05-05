@@ -13,3 +13,5 @@ onAdded(): Observable<ChildChangeEvent<T>>;
 
 Observable&lt;[ChildChangeEvent](./treex.childchangeevent.md)<!-- -->&lt;T&gt;&gt;
 
+an observable which observe an added node
+

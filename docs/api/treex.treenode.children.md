@@ -4,6 +4,8 @@
 
 ## TreeNode.children property
 
+A child list.
+
 <b>Signature:</b>
 
 ```typescript

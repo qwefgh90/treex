@@ -4,6 +4,8 @@
 
 ## ViewNodeSelectionChange interface
 
+An event interface for selection
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,6 +16,6 @@ export interface ViewNodeSelectionChange<T>
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [node](./treex.viewnodeselectionchange.node.md) | [ViewNode](./treex.viewnode.md)<!-- -->&lt;T&gt; |  |
-|  [selected](./treex.viewnodeselectionchange.selected.md) | boolean |  |
+|  [node](./treex.viewnodeselectionchange.node.md) | [ViewNode](./treex.viewnode.md)<!-- -->&lt;T&gt; | A node where a selection changed |
+|  [selected](./treex.viewnodeselectionchange.selected.md) | boolean | current status of selection |
 

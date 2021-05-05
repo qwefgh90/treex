@@ -4,6 +4,8 @@
 
 ## ViewNode.onVisibilityChange() method
 
+It's a event listener on changes of visibility status.
+
 <b>Signature:</b>
 
 ```typescript
@@ -12,4 +14,6 @@ onVisibilityChange(): Observable<ViewNodeVisibilityChange<T>>;
 <b>Returns:</b>
 
 Observable&lt;[ViewNodeVisibilityChange](./treex.viewnodevisibilitychange.md)<!-- -->&lt;T&gt;&gt;
+
+an observable to observe [ViewNodeVisibilityChange](./treex.viewnodevisibilitychange.md)
 

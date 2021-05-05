@@ -4,7 +4,7 @@
 
 ## RootNode interface
 
-to make all nodes to work as root under the specific condition
+Every node works as a root of a subtree.
 
 <b>Signature:</b>
 
@@ -12,19 +12,23 @@ to make all nodes to work as root under the specific condition
 export interface RootNode<T> 
 ```
 
+## Remarks
+
+It has limited APIs which a root node must have and provide to developers.
+
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [height](./treex.rootnode.height.md) | number |  |
+|  [height](./treex.rootnode.height.md) | number | A height of a tree. |
 
 ## Methods
 
 |  Method | Description |
 |  --- | --- |
-|  [contains(node)](./treex.rootnode.contains.md) |  |
-|  [find(predicate)](./treex.rootnode.find.md) |  |
-|  [getNodes()](./treex.rootnode.getnodes.md) |  |
-|  [getNodes(level)](./treex.rootnode.getnodes_1.md) |  |
-|  [getNodes(strategy)](./treex.rootnode.getnodes_2.md) |  |
+|  [contains(node)](./treex.rootnode.contains.md) | It lets us know whether a node exists in a tree. |
+|  [find(predicate)](./treex.rootnode.find.md) | It tries to visit every node and apply a predicate to each node. When a result value of executing the predicate with a node is true, It stops visiting and return that node. |
+|  [getNodes()](./treex.rootnode.getnodes.md) | It returns an array of all descendants with bfs or dfs.  |
+|  [getNodes(level)](./treex.rootnode.getnodes_1.md) | It returns an array of all descendants on a specific level  |
+|  [getNodes(strategy)](./treex.rootnode.getnodes_2.md) | It returns an array of all descendants with a specific algorithm  |
 

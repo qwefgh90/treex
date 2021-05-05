@@ -4,6 +4,8 @@
 
 ## TreeNode.selectedNodes property
 
+A list of selected nodes.
+
 <b>Signature:</b>
 
 ```typescript

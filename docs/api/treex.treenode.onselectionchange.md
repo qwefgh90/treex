@@ -4,6 +4,8 @@
 
 ## TreeNode.onSelectionChange() method
 
+It's a event listener on changes of selection status.
+
 <b>Signature:</b>
 
 ```typescript
@@ -12,4 +14,6 @@ onSelectionChange(): Observable<ViewNodeSelectionChange<T>>;
 <b>Returns:</b>
 
 Observable&lt;[ViewNodeSelectionChange](./treex.viewnodeselectionchange.md)<!-- -->&lt;T&gt;&gt;
+
+an observable to observe [ViewNodeSelectionChange](./treex.viewnodeselectionchange.md)
 

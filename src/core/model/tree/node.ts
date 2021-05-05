@@ -6,31 +6,71 @@ import { TreeResource } from "./tree-resource";
 import { ViewNode, ViewNodeSelectionChange, ViewNodeUpdate, ViewNodeVisibilityChange } from "../view/view-node"
 import { filter, first, take } from "rxjs/operators";
 
+/**
+ * A TreeNode is a basic unit to construct a leaf in a tree. 
+ * The instantiation of {@link TreeNode} is usually done through {@link Tree.createTree} or some methods with {@link NodeProp}.
+ * It provides fluent APIs and support a type parameter for data.
+ * 
+ * @remarks
+ * 
+ * It rarely happen to instantiate a instance of it on your own.
+ * 
+ * @public
+ * @typeParam T - a type of data which this node contains
+ * 
+ */
 export class TreeNode<T> implements ManipulationNode<T>{
+    /**
+     * {@inheritDoc ViewNode.prop}
+     */
     get prop(): NodeProp<T>{
         return {data: this.data, children: this.children.map(n => n.prop)};
     }
+    /**
+     * {@inheritDoc ViewNode.children}
+     */
     get children(): ReadonlyArray<TreeNode<T>>{
         return [...this._internalChildren];//TODO: is performance okay? it's for providing a clone instance
     }//it's not likely be improved more. https://www.debugcn.com/ko/article/26632735.html
+    /**
+     * {@inheritDoc ViewNode.data}
+     */
     get data(): T{
         return this._data;
     }
+    /**
+     * {@inheritDoc ViewNode.parent}
+     */
     get parent(): TreeNode<T> | "tree" | undefined{
         return this._parent;
     }
+    /**
+     * {@inheritDoc ViewNode.path}
+     */
     get path(): string{
         throw new Error("It's been not implemented");
     }
+    /**
+     * {@inheritDoc ViewNode.selected}
+     */
     get selected(): boolean{
         return this._selected;
     }
+    /**
+     * {@inheritDoc ViewNode.visibility}
+     */
     get visibility(): boolean{
         return this._visibility; 
     }
+    /**
+     * {@inheritDoc ViewNode.selectedNodes}
+     */
     get selectedNodes(): TreeNode<T>[]{
         return this.getNodes().filter(n => n.selected);
     }
+    /**
+     * {@inheritDoc RootNode.height}
+     */
     get height(): number{
         return this._height;
     }
@@ -48,6 +88,12 @@ export class TreeNode<T> implements ManipulationNode<T>{
     private _visibility: boolean = true;
     private _data: T;
     private _selected: boolean = false;
+    /**
+     * 
+     * @param _prop - properties which are used to instantiate new instance 
+     * @param _parent - a parent node
+     * @param resource - shared resources with other nodes
+     */
     constructor(_prop: NodeProp<T>, private _parent: TreeNode<T> | "tree" | undefined,
         private readonly resource: TreeResource<T>
      ){
@@ -71,10 +117,16 @@ export class TreeNode<T> implements ManipulationNode<T>{
     //     }, [])];
     // }
 
+    /**
+     * {@inheritDoc RootNode.contains}
+     */
     contains(node: TreeNode<T>): boolean{
         return this.getNodes().find(n => n == node) != undefined;
     }
 
+    /**
+     * {@inheritDoc RootNode.find}
+     */
     find(predicate: (node: TreeNode<T>) => boolean): TreeNode<T> | undefined{
         const found = this.bfs(({item, level}) => predicate(item), true)
         if(found.length > 0)
@@ -105,22 +157,33 @@ export class TreeNode<T> implements ManipulationNode<T>{
         this._nodeUpdatedSubject.next({data: _data, previous, node: this});
     }
 
+    /**
+     * {@inheritDoc ViewNode.select}
+     */
     select(): void{
         this._selected = true;
         this._selectionSubject.next({selected: true, node: this});
     }
 
+    /**
+     * {@inheritDoc ViewNode.deselect}
+     */
     deselect(): void{
         this._selected = false;
         this._selectionSubject.next({selected: false, node: this});
     }
 
-    //TODO: update test case
+    /**
+     * {@inheritDoc ViewNode.setVisibility}
+     */
     setVisibility(visibility: boolean){
         this._visibility = visibility;
         this._visibilityChangeSubject.next({visible: visibility, node: this});
     }
 
+    /**
+     * {@inheritDoc ManipulationNode.appendChild}
+     */
     appendChild(prop: NodeProp<T>): void{
         let addedNode = new TreeNode(prop, this, this.resource);
         const newChildrenList = [...this._internalChildren, addedNode];
@@ -129,6 +192,9 @@ export class TreeNode<T> implements ManipulationNode<T>{
         this.updateHeight(true);
     }
     
+    /**
+     * {@inheritDoc ManipulationNode.appendBefore}
+     */
     appendBefore(prop: NodeProp<T>): boolean{
         if(this.parent == "tree" || this.parent == undefined)
             return false;
@@ -150,6 +216,9 @@ export class TreeNode<T> implements ManipulationNode<T>{
             return true;
         }
     }
+    /**
+     * {@inheritDoc ManipulationNode.appendAfter}
+     */
     appendAfter(prop: NodeProp<T>): boolean{
         if(this.parent == "tree" || this.parent == undefined)
             return false;
@@ -172,6 +241,9 @@ export class TreeNode<T> implements ManipulationNode<T>{
         }
     }
     
+    /**
+     * {@inheritDoc ManipulationNode.remove}
+     */
     remove(): boolean{
         if(this.parent == "tree" || this.parent == undefined)
             return false;
@@ -192,9 +264,13 @@ export class TreeNode<T> implements ManipulationNode<T>{
             oldIndex: index});
             this.parent.updateHeight(true);
             this._removedSubject.next(this);
+            this._parent = undefined;
             return true;
         }
     }
+    /**
+     * {@inheritDoc ManipulationNode.removeChild}
+     */
     removeChild(node: TreeNode<T>): boolean{
         const oldChildrenList = this._internalChildren;
         let index = oldChildrenList.findIndex(v => v == node);
@@ -204,6 +280,9 @@ export class TreeNode<T> implements ManipulationNode<T>{
             return oldChildrenList[index].remove();
         }
     }
+    /**
+     * {@inheritDoc ManipulationNode.removeAllChildren}
+     */
     removeAllChildren(): number{
         const oldChildrenList = this._internalChildren;
         const result = oldChildrenList.map(n => this.removeChild(n)).filter(b => b);
@@ -214,8 +293,17 @@ export class TreeNode<T> implements ManipulationNode<T>{
         }
     }
 
+    /**
+     * {@inheritDoc RootNode.getNodes}
+     */
     getNodes(): TreeNode<T>[];
+    /**
+     * {@inheritDoc RootNode.getNodes}
+     */
     getNodes(level: number): TreeNode<T>[];
+    /**
+     * {@inheritDoc RootNode.getNodes}
+     */
     getNodes(strategy: "bfs" | "dfs"): TreeNode<T>[];
     getNodes(param?: any): TreeNode<T>[]{
         if(param == undefined){
@@ -232,10 +320,7 @@ export class TreeNode<T> implements ManipulationNode<T>{
     }
     
     /**
-     * starts from zero level
-     * @param predicate 
-     * @param stopWhenFound 
-     * @returns 
+     * {@inheritDoc ViewNode.bfs}
      */
     bfs(predicate: (entry: {item: TreeNode<T>, level: number}) => boolean = () => true, stopWhenFound: boolean = false){
         let queue: Array<{item: TreeNode<T>, level: number}> = [];
@@ -267,21 +352,37 @@ export class TreeNode<T> implements ManipulationNode<T>{
         return dfsContainer;
     }
 
+    /**
+     * {@inheritDoc ManipulationNode.onChildChanged}
+     */
     onChildChanged(): Observable<ChildChangeEvent<T>>{
         return this._childChangeSubject.pipe(filter(event => event.node == this));
     }
 
+    /**
+     * {@inheritDoc ViewNode.onVisibilityChange}
+     */
     onVisibilityChange(): Observable<ViewNodeVisibilityChange<T>>{
         return this._visibilityChangeSubject.pipe(filter(event => event.node == this));
     }
+
+    /**
+     * {@inheritDoc ViewNode.onUpdated}
+     */
     onUpdated(): Observable<ViewNodeUpdate<T>>{
         return this._nodeUpdatedSubject.pipe(filter(event => event.node == this));
     }
 
+    /**
+     * {@inheritDoc ViewNode.onSelectionChange}
+     */
     onSelectionChange(): Observable<ViewNodeSelectionChange<T>>{
         return this._selectionSubject.pipe(filter(event => event.node == this));
     }
 
+    /**
+     * {@inheritDoc ManipulationNode.onRemoved}
+     */
     onRemoved(): Promise<TreeNode<T>>{
         return this._removedSubject.pipe(filter(node => node == this), first()).toPromise();
     }

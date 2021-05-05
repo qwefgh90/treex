@@ -1,10 +1,13 @@
 ### TreeX
-A TreeX is a javascript library to provide customizable tree and built-in tree styles.
-It help you to have the tree design by providing framework code.
+A TreeX is a javascript/typescript library to provide the tree data structure for you to use in your application.
+And it also privide customizable tree elements with built-in styles.
+
+- Demo: https://qwefgh90.github.io/treex/
+- API documentation: https://qwefgh90.github.io/treex/api
 
 #### Features
-- well-defined data structure and operations for Tree
-- collapse, expand, multi selection, icons
-- checkbox with tri-state
-- extensibility to customize templates, styles
-- default templates
+- [x] well-defined tree data structure and operations
+- [x] collapse, expand, multi selection, icons
+- [ ] checkbox with tri-state
+- [x] extensibility to customize templates, styles
+- [x] default templates

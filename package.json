@@ -5,14 +5,14 @@
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
-        "build": "webpack --config webpack.dev.js && npm run sass",
-        "build:prod": "webpack --config webpack.prod.js && npm run sass",
+        "build": "webpack --config webpack.dev.js && npm run sass && npm run api",
+        "build:prod": "webpack --config webpack.prod.js && npm run sass && npm run api",
         "sass:watch": "sass --watch src/presentation/style/core.scss dist/style/core.css",
         "sass": "sass src/presentation/style/core.scss dist/style/core.css",
         "watch": "concurrently --kill-others \"webpack --watch --config webpack.dev.js\" \"npm run sass:watch\"",
         "test": "jest",
         "test:watch": "jest --watch",
-        "api": "api-extractor run --local --verbose && api-documenter markdown -i api/input -o api/markdown",
+        "api": "api-extractor run --local --verbose && api-documenter markdown -i api/input -o docs/api",
         "bundle": "webpack"
     },
     "dependencies": {

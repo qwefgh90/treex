@@ -4,6 +4,8 @@
 
 ## RootNode.getNodes() method
 
+It returns an array of all descendants with bfs or dfs. 
+
 <b>Signature:</b>
 
 ```typescript
@@ -12,4 +14,6 @@ getNodes(): RootNode<T>[];
 <b>Returns:</b>
 
 [RootNode](./treex.rootnode.md)<!-- -->&lt;T&gt;\[\]
+
+An array of all descendants
 

@@ -4,6 +4,8 @@
 
 ## TreeNode.appendAfter() method
 
+It usually append a node successfully, but it isn't possible to append a node next to root node.
+
 <b>Signature:</b>
 
 ```typescript
@@ -19,4 +21,6 @@ appendAfter(prop: NodeProp<T>): boolean;
 <b>Returns:</b>
 
 boolean
+
+if a node is appended successfully, return true, otherwise return false
 

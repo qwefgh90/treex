@@ -4,6 +4,8 @@
 
 ## ViewNode.selected property
 
+Whether it is selected.
+
 <b>Signature:</b>
 
 ```typescript

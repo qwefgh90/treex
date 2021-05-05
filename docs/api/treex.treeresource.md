@@ -4,11 +4,17 @@
 
 ## TreeResource interface
 
+TreeResource is a tree's singleton object to manage all events emitted by leaves in a same tree with RxJS. And subjects in a tree resource are unique pipes used for leaf nodes to propagate their events to parent nodes
+
 <b>Signature:</b>
 
 ```typescript
 export interface TreeResource<T> 
 ```
+
+## Remarks
+
+If every leaf has its own subject, duplicate resources waste the memory and it can't be easily managed by parents.
 
 ## Properties
 

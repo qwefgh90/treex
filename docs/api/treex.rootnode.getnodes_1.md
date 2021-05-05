@@ -4,6 +4,8 @@
 
 ## RootNode.getNodes() method
 
+It returns an array of all descendants on a specific level 
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,9 +16,11 @@ getNodes(level: number): RootNode<T>[];
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  level | number |  |
+|  level | number | a level which children are on |
 
 <b>Returns:</b>
 
 [RootNode](./treex.rootnode.md)<!-- -->&lt;T&gt;\[\]
+
+An array of descendants on the level
 

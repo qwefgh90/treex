@@ -4,6 +4,8 @@
 
 ## TreeNode.remove() method
 
+Remove itself in a tree it belong to.
+
 <b>Signature:</b>
 
 ```typescript
@@ -12,4 +14,6 @@ remove(): boolean;
 <b>Returns:</b>
 
 boolean
+
+if it's a node which is not a root return true, otherwise return false
 

@@ -6,7 +6,7 @@
 
 > Warning: This API is now obsolete.
 > 
-> Use [the children property](./treex.treenode.children.md) A new child list which has just been initialized
+> Use [the children property](./treex.treenode.children.md) instead of it. A new child list which has just been initialized
 > 
 
 <b>Signature:</b>

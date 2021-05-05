@@ -4,6 +4,8 @@
 
 ## ViewNode.prop property
 
+A initial data which was provided when a node was created.
+
 <b>Signature:</b>
 
 ```typescript

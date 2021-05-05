@@ -4,17 +4,19 @@
 
 ## ViewNode.setVisibility() method
 
+Set the visibility of this node.
+
 <b>Signature:</b>
 
 ```typescript
-setVisibility(visibility: boolean): void;
+setVisibility(visible: boolean): void;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  visibility | boolean |  |
+|  visible | boolean | a prameter to change the visibility |
 
 <b>Returns:</b>
 

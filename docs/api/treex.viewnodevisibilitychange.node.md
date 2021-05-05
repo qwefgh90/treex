@@ -4,6 +4,8 @@
 
 ## ViewNodeVisibilityChange.node property
 
+A node where a change happens
+
 <b>Signature:</b>
 
 ```typescript
