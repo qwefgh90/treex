@@ -12,16 +12,20 @@
         "watch": "concurrently --kill-others \"webpack --watch --config webpack.dev.js\" \"npm run sass:watch\"",
         "test": "jest",
         "test:watch": "jest --watch",
+        "api": "api-extractor run --local --verbose && api-documenter markdown -i api/input -o api/markdown",
         "bundle": "webpack"
     },
     "dependencies": {
         "rxjs": "^6.6.2"
     },
     "devDependencies": {
+        "@microsoft/api-documenter": "^7.13.6",
+        "@microsoft/api-extractor": "^7.15.1",
         "@types/chrome": "0.0.122",
         "@types/jest": "^26.0.20",
         "@types/node": "^14.0.27",
         "bootstrap": "^5.0.0-beta3",
+        "concurrently": "^5.3.0",
         "copy-webpack-plugin": "^8.1.0",
         "jest": "^26.6.3",
         "sass": "^1.32.8",
@@ -30,7 +34,6 @@
         "typescript": "^4.1.3",
         "webpack": "^5.24.4",
         "webpack-cli": "^4.5.0",
-        "webpack-merge": "^5.7.3",
-        "concurrently": "^5.3.0"
+        "webpack-merge": "^5.7.3"
     }
 }
