@@ -4,6 +4,7 @@ And it also privide customizable tree elements with built-in styles.
 
 - Demo: https://qwefgh90.github.io/treex/
 - API documentation: https://qwefgh90.github.io/treex/api
+- `npm install treex.js`
 
 #### Features
 - [x] well-defined tree data structure and operations

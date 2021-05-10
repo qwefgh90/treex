@@ -34,6 +34,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: "dist", to: "../docs" },
+        { from: "package.json", to: "" },
       ],
     }),
   ],
