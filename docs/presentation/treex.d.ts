@@ -22,6 +22,9 @@ export declare const classNameMap: Readonly<{
     hiddenClass: string;
     noneClass: string;
 }>;
+/**
+ * @public
+ */
 export declare type ToStringInterface = Pick<string, "toString">;
 /**
  * @public

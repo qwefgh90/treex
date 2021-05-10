@@ -243,6 +243,9 @@ export declare class TemplateFactory<T> {
     private extendedFragment;
 }
 
+/**
+ * @public
+ */
 export declare type ToStringInterface = Pick<string, "toString">;
 
 /**

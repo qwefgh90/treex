@@ -34,7 +34,6 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: "dist", to: "../docs" },
-        { from: "api/markdown", to: "../docs/api" },
       ],
     }),
   ],
