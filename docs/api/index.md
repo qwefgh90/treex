@@ -8,7 +8,5 @@
 
 |  Package | Description |
 |  --- | --- |
-|  [treex](./treex.md) |  |
-|  [treex-js](./treex-js.md) |  |
 |  [treex.js](./treex.js.md) |  |
 

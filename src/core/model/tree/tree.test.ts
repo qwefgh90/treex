@@ -1,4 +1,3 @@
-import { create } from "node:domain";
 import { NodeProp } from "../view/node-prop";
 import { Tree } from "./tree";
 

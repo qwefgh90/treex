@@ -1,4 +1,3 @@
-import { doesNotMatch } from "node:assert";
 import { Tree } from "../tree/tree";
 import { NodeProp } from "./node-prop";
 

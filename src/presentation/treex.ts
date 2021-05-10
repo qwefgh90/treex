@@ -1,7 +1,5 @@
-import { Subscription } from "rxjs";
 import { TreeNode } from "../core/model/tree/node";
 import { Tree } from "../core/model/tree/tree";
-import { NodeProp } from "../core/model/view/node-prop";
 /**
  * @public
  */
