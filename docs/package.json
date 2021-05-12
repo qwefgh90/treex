@@ -5,7 +5,7 @@
     "main": "index.js",
     "types": "index.d.ts",
     "scripts": {
-        "build": "webpack --config webpack.dev.js && npm run sass && npm run api",
+        "build": "webpack --config webpack.dev.js && npm run sass && npm run api ",
         "build:prod": "webpack --config webpack.prod.js && npm run sass && npm run api",
         "sass:watch": "sass --watch src/presentation/style/core.scss dist/style/core.css",
         "sass": "sass src/presentation/style/core.scss dist/style/core.css",
@@ -27,6 +27,7 @@
         "bootstrap": "^5.0.0-beta3",
         "concurrently": "^5.3.0",
         "copy-webpack-plugin": "^8.1.0",
+        "filemanager-webpack-plugin": "^5.0.0",
         "jest": "^26.6.3",
         "sass": "^1.32.8",
         "ts-jest": "^26.4.4",

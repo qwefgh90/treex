@@ -1,9 +1,12 @@
 const path = require('path');
 // const CopyPlugin = require('copy-webpack-plugin');
 // const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CopyPlugin = require("copy-webpack-plugin");
-
+// const CopyPlugin = require("copy-webpack-plugin");
+const FileManagerPlugin = require('filemanager-webpack-plugin');
 module.exports = {
+  watchOptions: {
+    ignored: ['**/docs'],
+  },
   mode: "development",
   entry: "./src/index.ts",
   output: {
@@ -30,12 +33,17 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.tsx', '.ts']
   },
+  
   plugins: [
-    new CopyPlugin({
-      patterns: [
-        { from: "dist", to: "../docs" },
-        { from: "package.json", to: "" },
-      ],
+    new FileManagerPlugin({
+      events: {
+        onEnd: {
+          copy: [
+            { source: 'package.json', destination: 'dist/package.json' },
+            { source: 'dist', destination: 'docs' },
+          ]
+        },
+      },
     }),
   ],
 };
